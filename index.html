@@ -17,7 +17,6 @@
 
     :root {
       --green: #4ae179;
-      --green-dark: #20b956;
       --purple: #8b5cf6;
       --bg: #09090b;
       --card: rgba(255, 255, 255, 0.06);
@@ -100,7 +99,6 @@
       align-items: center;
       text-align: center;
       padding: 140px 20px 80px;
-      position: relative;
     }
 
     .hero-content {
@@ -137,8 +135,10 @@
         #8affaa,
         var(--purple)
       );
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero p {
@@ -180,20 +180,20 @@
     }
 
     .secondary {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
       color: white;
       border: 1px solid var(--border);
     }
 
     .secondary:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       transform: translateY(-3px);
     }
 
     .hero-note {
-      margin-top: 20px;
-      color: #71717a;
-      font-size: 13px;
+      margin-top: 20px !important;
+      color: #71717a !important;
+      font-size: 13px !important;
     }
 
     /* STATS */
@@ -351,9 +351,9 @@
       align-items: center;
       gap: 18px;
       padding: 18px;
-      background: rgba(0,0,0,0.2);
+      background: rgba(0, 0, 0, 0.2);
       border-radius: 15px;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .number {
@@ -377,6 +377,36 @@
       font-size: 14px;
     }
 
+    /* TRANSPARENCY */
+
+    .transparency-icon {
+      width: 75px;
+      height: 75px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 25px;
+      border-radius: 22px;
+      background: rgba(74, 225, 121, 0.12);
+      border: 1px solid rgba(74, 225, 121, 0.2);
+      font-size: 34px;
+    }
+
+    .transparency-box {
+      text-align: center;
+    }
+
+    .transparency-box h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .transparency-box p {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 15px auto;
+    }
+
     /* CTA */
 
     .cta {
@@ -396,6 +426,8 @@
       margin: auto auto 30px;
       line-height: 1.7;
     }
+
+    /* FOOTER */
 
     footer {
       border-top: 1px solid var(--border);
@@ -441,6 +473,10 @@
         letter-spacing: -3px;
       }
 
+      section {
+        padding: 80px 6%;
+      }
+
     }
   </style>
 </head>
@@ -456,6 +492,7 @@
       <a href="#features">Features</a>
       <a href="#preview">Preview</a>
       <a href="#install">Install</a>
+      <a href="#transparency">Transparency</a>
 
       <a
         class="nav-download"
@@ -545,7 +582,10 @@
   <section id="features">
 
     <div class="section-title">
-      <h2>Customize Roblox <span class="gradient-text">to the max.</span></h2>
+      <h2>
+        Customize Roblox
+        <span class="gradient-text">to the max.</span>
+      </h2>
 
       <p>
         Stop being stuck with the same Roblox interface.
@@ -564,6 +604,7 @@
         </p>
       </div>
 
+
       <div class="feature">
         <div class="icon">🔎</div>
         <h3>Search Bar</h3>
@@ -571,6 +612,7 @@
           Change the appearance of the Roblox search area to fit your theme.
         </p>
       </div>
+
 
       <div class="feature">
         <div class="icon">📚</div>
@@ -581,6 +623,7 @@
         </p>
       </div>
 
+
       <div class="feature">
         <div class="icon">⬆️</div>
         <h3>Topbar</h3>
@@ -588,6 +631,7 @@
           Make the Roblox top navigation match your personal style.
         </p>
       </div>
+
 
       <div class="feature">
         <div class="icon">🖥️</div>
@@ -597,11 +641,13 @@
         </p>
       </div>
 
+
       <div class="feature">
         <div class="icon">🔓</div>
         <h3>Open Source</h3>
         <p>
-          See how RoHue works, explore the source code, and learn from the project.
+          See exactly how RoHue works, inspect the code,
+          and contribute to the project.
         </p>
       </div>
 
@@ -610,12 +656,14 @@
   </section>
 
 
-  <!-- PREVIEW -->
+  <!-- PREVIEWS -->
 
   <section id="preview">
 
     <div class="section-title">
-      <h2>See <span class="gradient-text">RoHue</span> in action.</h2>
+      <h2>
+        See <span class="gradient-text">RoHue</span> in action.
+      </h2>
 
       <p>
         A different Roblox experience starts with a different look.
@@ -632,12 +680,14 @@
         >
       </div>
 
+
       <div class="preview">
         <img
           src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/5X/d/0/0/4/d004809b94073aa6727db1769483ce4fc82b14c2_2_690x229.png"
           alt="RoHue Customization Preview"
         >
       </div>
+
 
       <div class="preview">
         <img
@@ -656,10 +706,13 @@
   <section id="install">
 
     <div class="section-title">
-      <h2>Easy to install. <span class="gradient-text">Seriously.</span></h2>
+      <h2>
+        Easy to install.
+        <span class="gradient-text">Seriously.</span>
+      </h2>
 
       <p>
-        RoHue is currently installed locally through Chrome Developer Mode.
+        RoHue is installed locally through Chrome Developer Mode.
         Don't worry — it only takes a few steps.
       </p>
     </div>
@@ -674,9 +727,7 @@
 
           <div>
             <strong>Download RoHue</strong>
-            <span>
-              Download the latest release from GitHub.
-            </span>
+            <span>Download the latest release from GitHub.</span>
           </div>
         </div>
 
@@ -686,9 +737,7 @@
 
           <div>
             <strong>Open Chrome Extensions</strong>
-            <span>
-              Go to chrome://extensions/
-            </span>
+            <span>Go to chrome://extensions/</span>
           </div>
         </div>
 
@@ -698,9 +747,7 @@
 
           <div>
             <strong>Enable Developer Mode</strong>
-            <span>
-              Turn on Developer Mode in the Extensions page.
-            </span>
+            <span>Turn on Developer Mode in the Extensions page.</span>
           </div>
         </div>
 
@@ -731,7 +778,7 @@
       </div>
 
 
-      <div style="text-align:center; margin-top:30px;">
+      <div style="text-align: center; margin-top: 30px;">
 
         <a
           class="button primary"
@@ -748,7 +795,62 @@
   </section>
 
 
-  <!-- CTA -->
+  <!-- TRANSPARENCY -->
+
+  <section id="transparency">
+
+    <div class="section-title">
+
+      <h2>
+        Don't trust RoHue yet?
+        <span class="gradient-text">Good.</span>
+      </h2>
+
+      <p>
+        You shouldn't blindly trust browser extensions.
+      </p>
+
+    </div>
+
+
+    <div class="install-box transparency-box">
+
+      <div class="transparency-icon">
+        🔍
+      </div>
+
+      <h3>Don't just trust us. Verify us.</h3>
+
+      <p>
+        RoHue is completely open source. The files you download are
+        the actual extension files, meaning you can open the RoHue folder
+        in VS Code or any code editor and inspect exactly how it works.
+      </p>
+
+      <p>
+        No hidden mystery. No closed-source black box.
+        If you don't trust it, check the code yourself.
+      </p>
+
+
+      <div style="margin-top: 30px;">
+
+        <a
+          class="button secondary"
+          href="https://github.com/Ayysail/rohue"
+          target="_blank"
+        >
+          &lt;/&gt; Inspect the Source Code
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
 
   <section class="cta">
 
@@ -761,6 +863,7 @@
       RoHue is free forever, open source, and built for people who want
       more control over how Roblox looks.
     </p>
+
 
     <a
       class="button primary"
@@ -782,16 +885,19 @@
     </div>
 
     <div>
+
       <a
         href="https://github.com/Ayysail/rohue"
         target="_blank"
       >
         GitHub
       </a>
+
       &nbsp; • &nbsp;
       Free Forever
       &nbsp; • &nbsp;
       Open Source
+
     </div>
 
   </footer>
